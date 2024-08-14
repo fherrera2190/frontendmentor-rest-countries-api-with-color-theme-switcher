@@ -1,9 +1,8 @@
 #root {
   max-width: 1440px;
-  
 }
 
-body{
+body {
   margin: 0 auto;
   width: 80%;
 }
@@ -14,9 +13,51 @@ body{
   background-color: #333;
   color: #fff;
   padding: 20px 40px;
-  & .mode{
+  & .mode {
     display: flex;
     align-items: center;
     gap: 10px;
   }
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+
+  & .filter {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #333;
+    gap: 10px;
+    & i {
+      cursor: pointer;
+    }
+  }
+
+  & .search {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    gap:20px;
+    padding: 10px 20px ;
+    width: 300px;
+    & input {
+      border: none;
+      background-color: inherit;
+      &:focus {
+        outline: none;
+    }
+    }
+  }
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
