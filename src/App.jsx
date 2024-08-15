@@ -8,7 +8,6 @@ import { useFetchCountries } from "./hooks";
 function App() {
   const { countries } = useFetchCountries();
 
-  console.log(countries.length);
 
   return (
     <>
