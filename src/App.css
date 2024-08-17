@@ -89,7 +89,7 @@ header {
   flex-direction: column;
   overflow: hidden;
   width: 21%;
-  max-width: 220px;
+  min-width: 220px;
   & .flag {
     height: 150px;
     & img {
@@ -145,6 +145,6 @@ header {
     width: 100%;
   }
   .country-card {
-    width: 100%;
+    width: 90%;
   }
 }

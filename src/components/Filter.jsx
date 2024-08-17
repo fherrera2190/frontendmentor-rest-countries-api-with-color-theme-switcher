@@ -5,7 +5,6 @@ export const Filter = () => {
 
   const handleStatus = () => {
     console.log("click");
-    console.log(filterStatus);
     setFilterStatus(!filterStatus);
   };
 
@@ -20,10 +19,10 @@ export const Filter = () => {
         ></i>
       </small>
       {filterStatus && (
-        <div className="regions">
-          <p>America</p>
-          <p>Europa</p>
-        </div>
+        <ul className="regions">
+          <li><a href="www.google.com">America</a></li>
+          <li>Eurolia</li>
+        </ul>
       )}
     </div>
   );
