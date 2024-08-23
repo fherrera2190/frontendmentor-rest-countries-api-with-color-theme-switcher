@@ -1,6 +1,8 @@
-export const getCountries = async () => {
+export const getCountriesByRegion = async (region) => {
   try {
-    const response = await fetch("https://restcountries.com/v3.1/all");
+    const response = await fetch(
+      `https://restcountries.com/v3.1/region/${region}`
+    );
 
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -25,6 +27,10 @@ export const getCountries = async () => {
       };
     });
 
+    // name,population,region,capital,flags,subregion, nativeName, topLevelDomain
+    // concurrency, languages, borders
+
+    // console.log(data);
     return data;
   } catch (error) {
     console.log(error.message);

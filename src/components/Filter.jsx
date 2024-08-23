@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { Regions } from "./Regions";
+
+// const regions = getRegions();
 
 export const Filter = () => {
   const [filterStatus, setFilterStatus] = useState(false);
@@ -18,12 +21,8 @@ export const Filter = () => {
           }`}
         ></i>
       </small>
-      {filterStatus && (
-        <ul className="regions">
-          <li><a href="www.google.com">America</a></li>
-          <li>Eurolia</li>
-        </ul>
-      )}
+
+      {filterStatus && <Regions />}
     </div>
   );
 };

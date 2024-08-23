@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-import { getCountries } from "../helpers";
+import { getCountries, getCountriesByRegion } from "../helpers";
 
 export const useFetchCountries = () => {
   const [countries, setCountries] = useState([]);
-  const [region, setRegion] = useState("all");
   const getCountriesData = async () => {
     const paises = await getCountries();
     setCountries(paises);
   };
 
-
+  const changeRegion = async (region) => {
+    const paises = await getCountriesByRegion(region);
+    setCountries(paises);
+  };
 
   useEffect(() => {
     getCountriesData();
@@ -17,6 +19,6 @@ export const useFetchCountries = () => {
 
   return {
     countries,
-    setCountries,
+    changeRegion,
   };
 };
