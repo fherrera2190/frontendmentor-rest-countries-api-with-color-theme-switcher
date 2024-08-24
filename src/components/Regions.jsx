@@ -1,9 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
-import { getRegions } from "../helpers/getRegions";
 import { Region } from "./Region";
 
+const regions = ["africa", "america", "asia", "europe", "oceania"];
+
 export const Regions = ({ filterStatus }) => {
-  const regions = useMemo(() => getRegions(), []);
   return (
     <div className="regions">
       {regions.map((region) => (
