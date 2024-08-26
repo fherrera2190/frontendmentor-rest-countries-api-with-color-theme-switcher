@@ -1,6 +1,14 @@
+export const Region = ({ region, changeRegion }) => {
 
-export const Region = ({region}) => {
+
+  const handleClick = () => {
+    console.log(region)
+    changeRegion(region);
+  };
+
   return (
-    <button>{region}</button>
-  )
-}
+    <button onClick={handleClick}>
+      {region}
+    </button>
+  );
+};

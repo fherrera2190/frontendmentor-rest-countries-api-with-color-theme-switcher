@@ -8,7 +8,8 @@ export const useFetchCountries = () => {
     setCountries(paises);
   };
 
-  const changeRegion = async (region) => {
+  const selectByRegion = async (region) => {
+    console.log(region);
     const paises = await getCountriesByRegion(region);
     setCountries(paises);
   };
@@ -19,6 +20,6 @@ export const useFetchCountries = () => {
 
   return {
     countries,
-    changeRegion,
+    selectByRegion,
   };
 };

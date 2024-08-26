@@ -3,7 +3,7 @@ import { Regions } from "./Regions";
 
 // const regions = getRegions();
 
-export const Filter = () => {
+export const Filter = ({ changeRegion }) => {
   const [filterStatus, setFilterStatus] = useState(false);
 
   const handleStatus = () => {
@@ -22,7 +22,9 @@ export const Filter = () => {
         ></i>
       </small>
 
-      {filterStatus && <Regions />}
+      {filterStatus && (
+        <Regions filterStatus={filterStatus} changeRegion={changeRegion} />
+      )}
     </div>
   );
 };
