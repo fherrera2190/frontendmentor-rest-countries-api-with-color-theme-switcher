@@ -6,14 +6,14 @@ import { Search } from "./components/Search";
 import { useFetchCountries } from "./hooks";
 
 function App() {
-  const { countries,selectByRegion } = useFetchCountries();
+  const { countries, selectByRegion, searchByName } = useFetchCountries();
 
   return (
     <>
       <Navbar />
       <div className="options">
-        <Search />
-        <Filter changeRegion={selectByRegion}/>
+        <Search searchCountry={searchByName} />
+        <Filter changeRegion={selectByRegion} />
       </div>
       <ListCountries countries={countries} />
     </>
