@@ -51,7 +51,7 @@ header {
       left: 0;
       padding: 15px 20px;
       bottom: -160px;
-      & button{
+      & button {
         color: inherit;
         display: flex;
         border: none;
@@ -59,7 +59,7 @@ header {
         background-color: inherit;
         gap: 10px;
         margin-bottom: 10px;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
@@ -74,6 +74,10 @@ header {
     gap: 20px;
     padding: 15px 20px;
     min-width: 300px;
+    & button {
+      background-color: inherit;
+      border: none;
+    }
     & input {
       border: none;
       background-color: inherit;
@@ -131,8 +135,7 @@ header {
     align-items: flex-start;
     gap: 30px;
     & .search {
-      max-width: none;
-      width: 100%;
+      min-width: 100%;
     }
   }
 

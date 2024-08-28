@@ -1,7 +1,8 @@
 export const getCountryByName = async (name) => {
+  if (!name) return [];
+
   const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
   let data = await res.json();
-  console.log(data);
   data = data.map((country) => {
     return {
       id: country.cca3,
