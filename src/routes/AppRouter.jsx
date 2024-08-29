@@ -4,19 +4,19 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
-import { MainLayout } from "../app/layouts";
+import { CountryPage, Home } from "../paises";
 
 const router = createBrowserRouter([
-  { path: "/", element: <MainLayout /> }, // 🆕
+  { path: "/", element: <Home /> },
+  { path: "country/:countryId", element: <CountryPage /> },
+
   { path: "*", element: <Root /> },
 ]);
 
 function Root() {
   return (
     <Routes>
-      {/* ⬆️ Home route lifted up to the data router */}
-      <Route path="/blog/*" element={<h1>blog</h1>} />
-      <Route path="/users/*" element={<h1>users</h1>} />
+      <Route path="/*" element={<h1>Error 404</h1>} />
     </Routes>
   );
 }

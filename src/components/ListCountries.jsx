@@ -6,7 +6,7 @@ export const ListCountries = ({ countries }) => {
   return (
     <div className="countries">
       {!!countries &&
-        countries.map((country) => <Country key={country.cca3} {...country} />)}
+        countries.map((country) => <Country key={country.id} {...country} />)}
     </div>
   );
 };

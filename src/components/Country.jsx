@@ -1,6 +1,9 @@
-export const Country = ({ name, population, region, capital, flags }) => {
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+
+export const Country = ({ id, name, population, region, capital, flags }) => {
   return (
-    <div className="country-card">
+    <Link to={`/country/${id}`} className="country-card">
       <div className="flag">
         <img src={flags} alt="" />
       </div>
@@ -18,6 +21,6 @@ export const Country = ({ name, population, region, capital, flags }) => {
           Capital: <small>{capital}</small>
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
