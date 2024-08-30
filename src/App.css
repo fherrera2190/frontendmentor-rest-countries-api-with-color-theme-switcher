@@ -103,6 +103,7 @@ header {
   color: #fff;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   overflow: hidden;
   width: 21%;
   min-width: 220px;
@@ -148,7 +149,9 @@ header {
     width: 250px;
   }
 }
-
+.country-page{
+  
+}
 @media (width<=375px) {
   .navbar {
     font-size: smaller;

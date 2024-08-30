@@ -5,7 +5,7 @@ export const Country = ({ id, name, population, region, capital, flags }) => {
   return (
     <Link to={`/country/${id}`} className="country-card">
       <div className="flag">
-        <img src={flags} alt="" />
+        <img src={flags} alt="" loading="lazy"/>
       </div>
       <h4>{name}</h4>
 
