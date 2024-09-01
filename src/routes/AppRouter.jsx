@@ -7,7 +7,11 @@ import {
 import { CountryPage, Home } from "../paises";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
+  {
+    path: "/",
+    element: <Home />,
+    // children: [{ path: "country/:countryId", element: <CountryPage /> }],
+  },
   { path: "country/:countryId", element: <CountryPage /> },
 
   { path: "*", element: <Root /> },

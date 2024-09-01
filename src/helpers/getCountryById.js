@@ -7,7 +7,6 @@ export const getCountryById = async (id) => {
     }
 
     let data = await response.json();
-
     data = data.map((country) => {
       return {
         id: country.cca3,
@@ -19,14 +18,14 @@ export const getCountryById = async (id) => {
         subregion: country.subregion,
         topLevelDomain: country.tld,
         nativeName: country.name.official,
-        curriencies: country.curriencies,
+        currencies: country.currencies,
         languages: country.languages,
         borders: country.borders,
       };
     });
     // name,population,region,capital,flags,subregion, nativeName, topLevelDomain
     // concurrency, languages, borders
-    return data;
+    return data[0];
   } catch (error) {
     console.log(error.message);
   }

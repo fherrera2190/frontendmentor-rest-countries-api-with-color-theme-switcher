@@ -96,6 +96,32 @@ header {
   margin: 0 auto;
   gap: 40px;
 }
+.country-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  & .flag {
+    width: 50%;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  & .info {
+    & .details {
+
+      display: flex;
+      justify-content: ceter;
+      align-items: center;
+      display: flex;
+      & .left {
+      }
+      & .right {
+      }
+    }
+  }
+}
 
 .country-card {
   border-radius: 5px;
@@ -149,9 +175,7 @@ header {
     width: 250px;
   }
 }
-.country-page{
-  
-}
+
 @media (width<=375px) {
   .navbar {
     font-size: smaller;

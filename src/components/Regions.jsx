@@ -2,7 +2,7 @@ import { Region } from "./Region";
 
 const regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
 
-export const Regions = ({ filterStatus, changeRegion }) => {
+export const Regions = ({  changeRegion }) => {
   return (
     <div className="regions">
       {regions.map((region) => (
