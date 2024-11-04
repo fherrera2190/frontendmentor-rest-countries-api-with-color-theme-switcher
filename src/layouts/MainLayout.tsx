@@ -1,6 +1,5 @@
-import { Navbar } from "../../components/Navbar";
+import { Navbar } from "../components";
 
-// eslint-disable-next-line react/prop-types
 export const MainLayout = ({ children }) => {
   return (
     <>

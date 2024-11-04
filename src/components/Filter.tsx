@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Regions } from "./Regions";
 
-
-// eslint-disable-next-line react/prop-types
 export const Filter = ({ changeRegion }) => {
   const [filterStatus, setFilterStatus] = useState(false);
 

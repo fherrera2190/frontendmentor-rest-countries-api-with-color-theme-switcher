@@ -1,6 +1,17 @@
 #root {
   max-width: 1440px;
   margin: 0 auto;
+  color: light-dark(#333b3c, #ffffffde);
+  background-color: light-dark(#efedea, #242424);
+}
+
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
 }
 
 header {
@@ -110,7 +121,6 @@ header {
   }
   & .info {
     & .details {
-
       display: flex;
       justify-content: ceter;
       align-items: center;

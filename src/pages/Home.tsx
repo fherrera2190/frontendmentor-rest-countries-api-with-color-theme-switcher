@@ -1,7 +1,5 @@
-import { Filter } from "../../components/Filter";
-import { ListCountries } from "../../components/ListCountries";
-import { Search } from "../../components/Search";
-import { useFetchCountries } from "../../hooks";
+import { Filter, ListCountries, Search } from "../components";
+import { useFetchCountries } from "../hooks";
 import { MainLayout } from "../layouts/MainLayout";
 
 export const Home = () => {

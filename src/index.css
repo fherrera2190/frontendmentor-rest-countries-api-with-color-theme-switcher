@@ -1,6 +1,6 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 /* 
 - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
@@ -12,18 +12,14 @@
 */
 :root {
   font-family: "Nunito Sans", sans-serif;
-  
+
   --dark-blue: hsl(209, 23%, 22%);
   --very-dark-blue: hsl(207, 26%, 17%);
   --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
-  --dark-gray: hsl(0, 0%, 52%);
-  --very-light-gray: hsl(0, 0%, 98%);
-  --white: hsl(0, 0%, 100%);
+  --dark-gray: #858585;
+  --very-light-gray: #fafafa;
+  --white: #ffffff;
   color-scheme: light dark;
-
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,10 +27,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
-

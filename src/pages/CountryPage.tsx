@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { useFetchCountries } from "../../hooks/useFetchCountries";
-import { MainLayout } from "../layouts";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useFetchCountries } from "../hooks";
+import { MainLayout } from "../layouts/MainLayout";
 
 export const CountryPage = () => {
   const { countryId } = useParams();
@@ -44,10 +44,10 @@ export const CountryPage = () => {
                 <strong>Top Level Domain:</strong> {countries.topLevelDomain}
               </p>
               <p>
-                <strong>Currencies:</strong> 
+                <strong>Currencies:</strong>
               </p>
               <p>
-                <strong>Languages:</strong> 
+                <strong>Languages:</strong>
               </p>
             </div>
           </div>

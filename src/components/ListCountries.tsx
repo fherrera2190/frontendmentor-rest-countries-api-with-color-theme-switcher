@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Country } from "./Country";
 
 export const ListCountries = ({ countries }) => {
