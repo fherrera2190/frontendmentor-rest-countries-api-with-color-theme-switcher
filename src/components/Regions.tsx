@@ -1,8 +1,9 @@
+import { RegionsProps } from "../interfaces";
 import { Region } from "./Region";
 
-const regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
+const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
-export const Regions = ({  changeRegion }) => {
+export const Regions = ({ changeRegion }: RegionsProps) => {
   return (
     <div className="regions">
       {regions.map((region) => (

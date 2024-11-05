@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Regions } from "./Regions";
+import { FilterProps } from "../interfaces";
 
-export const Filter = ({ changeRegion }) => {
+export const Filter = ({ changeRegion }: FilterProps) => {
   const [filterStatus, setFilterStatus] = useState(false);
 
   const handleStatus = () => {
@@ -19,9 +20,7 @@ export const Filter = ({ changeRegion }) => {
         ></i>
       </small>
 
-      {filterStatus && (
-        <Regions filterStatus={filterStatus} changeRegion={changeRegion} />
-      )}
+      {filterStatus && <Regions changeRegion={changeRegion} />}
     </div>
   );
 };

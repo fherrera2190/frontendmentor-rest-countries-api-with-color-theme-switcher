@@ -7,13 +7,15 @@ import { Country } from "../interfaces";
 const baseUrl = import.meta.env.VITE_URL_API_PAISES;
 export const CountryPage = () => {
   const { alpha } = useParams<string>();
-  const [pais, setPais] = useState({} as Country);
-  console.log(pais);
+  const [pais, setPais] = useState<Country | null>(null);
+   const getPais = async (url: string) => {
+    const resp = await getData(url);
+    setPais(resp);
+  };
+
   useEffect(() => {
     const dir = `${baseUrl}/alpha/${alpha}`;
-    getData(dir).then((country) => {
-      setPais(country);
-    });
+    getPais(dir);
   }, []);
   return <MainLayout>{pais && <CountryDetail pais={pais} />}</MainLayout>;
 };

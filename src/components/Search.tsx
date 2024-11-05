@@ -1,10 +1,7 @@
 import { useState } from "react";
+import { SearchProps } from "../interfaces/SearchProps";
 
-export const Search = ({
-  searchCountry,
-}: {
-  searchCountry: (url: string) => void;
-}) => {
+export const Search = ({ searchCountry }: SearchProps) => {
   const [search, setSearch] = useState("");
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();

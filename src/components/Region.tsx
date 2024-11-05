@@ -1,4 +1,6 @@
-export const Region = ({ region, changeRegion }) => {
+import { RegionProps } from "../interfaces";
+
+export const Region = ({ region, changeRegion }: RegionProps) => {
   const handleClick = () => {
     changeRegion(region);
   };

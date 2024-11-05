@@ -1,6 +1,6 @@
-import { Country } from "../interfaces";
+import { CountryDetailProps } from "../interfaces/CountryDetail";
 
-export const CountryDetail = ({ pais }: { pais: Country }) => {
+export const CountryDetail = ({ pais }: CountryDetailProps) => {
   return (
     <div className="country-page">
       <div className="flag">

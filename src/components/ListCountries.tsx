@@ -1,7 +1,7 @@
-import { Country } from "../interfaces/";
+import { ListCountriesProps } from "../interfaces/";
 import { CountryCard } from "./CountryCard";
 
-export const ListCountries = ({ countries }: { countries: Country[] }) => {
+export const ListCountries = ({ countries }: ListCountriesProps) => {
   return (
     <div className="countries">
       {countries.length > 0 ? (
