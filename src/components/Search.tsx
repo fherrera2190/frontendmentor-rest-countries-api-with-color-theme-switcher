@@ -1,14 +1,17 @@
 import { useState } from "react";
 
-// eslint-disable-next-line react/prop-types
-export const Search = ({ searchCountry }) => {
+export const Search = ({
+  searchCountry,
+}: {
+  searchCountry: (url: string) => void;
+}) => {
   const [search, setSearch] = useState("");
-  const handleInput = (e) => {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setSearch(e.target.value);
   };
 
-  const handleForm = (e) => {
+  const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     searchCountry(search);
     setSearch("");

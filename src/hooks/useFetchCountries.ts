@@ -1,39 +1,38 @@
 import { useEffect, useState } from "react";
-import {
-  getCountries,
-  getCountriesByRegion,
-  getCountryById,
-  getCountryByName,
-} from "../helpers";
+import { getData } from "../helpers/getData";
+import { Country } from "../interfaces";
 
-export const useFetchCountries = () => {
-  const [countries, setCountries] = useState([]);
-  const getCountriesData = async () => {
-    const paises = await getCountries();
+export const useFetchCountries = (url: string) => {
+  const [countries, setCountries] = useState<Country[]>([]);
+
+  const getAllCountries = async () => {
+    const paises = (await getData(url + "/all")) as Country[];
     setCountries(paises);
   };
 
-  const selectByRegion = async (region) => {
-    const paises = await getCountriesByRegion(region);
+  const getByRegion = async (region: string) => {
+    const paises = (await getData(url + "/region/" + region)) as Country[];
     setCountries(paises);
   };
-  const searchByName = async (name) => {
-    const paises = await getCountryByName(name);
+  const getByName = async (name: string) => {
+    const paises = (await getData(url + "/name/" + name)) as Country[];
     setCountries(paises);
   };
-  const getCountry = async (id) => {
-    const paises = await getCountryById(id);
+  const getByAlpha = async (alpha: string) => {
+    console.log(alpha);
+    const paises = (await getData(url + "/alpha/" + alpha)) as Country[];
+    console.log(paises);
     setCountries(paises);
   };
 
   useEffect(() => {
-    getCountriesData();
+    getAllCountries();
   }, []);
 
   return {
     countries,
-    selectByRegion,
-    searchByName,
-    getCountry,
+    getByRegion,
+    getByName,
+    getByAlpha,
   };
 };

@@ -1,11 +1,19 @@
-/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import { Country } from "../interfaces";
 
-export const Country = ({ id, name, population, region, capital, flags }) => {
+
+export const CountryCard = ({
+  alpha2Code,
+  name,
+  population,
+  region,
+  capital,
+  flags,
+}: Country) => {
   return (
-    <Link to={`/country/${id}`} className="country-card">
+    <Link to={`/country/${alpha2Code}`} className="country-card">
       <div className="flag">
-        <img src={flags} alt="" loading="lazy"/>
+        <img src={flags.png} alt="" loading="lazy" />
       </div>
       <h4>{name}</h4>
 

@@ -1,6 +1,6 @@
 import { Navbar } from "../components";
 
-export const MainLayout = ({ children }) => {
+export const MainLayout = ({ children }: { children: JSX.Element }) => {
   return (
     <>
       <Navbar />

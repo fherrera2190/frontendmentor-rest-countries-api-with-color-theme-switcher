@@ -1,4 +1,4 @@
-export * from './Country';
+export * from './CountryCard';
 export * from './Filter';
 export * from './ListCountries';
 export * from './Navbar';
