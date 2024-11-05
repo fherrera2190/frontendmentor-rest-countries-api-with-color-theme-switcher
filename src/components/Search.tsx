@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { SearchProps } from "../interfaces/SearchProps";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export const Search = ({ searchCountry }: SearchProps) => {
   const [search, setSearch] = useState("");
@@ -17,7 +19,7 @@ export const Search = ({ searchCountry }: SearchProps) => {
   return (
     <form onSubmit={handleForm} className="search">
       <button type="submit">
-        <i className="fa-solid fa-magnifying-glass"></i>
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
       </button>
 
       <input

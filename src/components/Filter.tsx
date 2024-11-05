@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Regions } from "./Regions";
 import { FilterProps } from "../interfaces";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 export const Filter = ({ changeRegion }: FilterProps) => {
   const [filterStatus, setFilterStatus] = useState(false);
@@ -10,14 +12,10 @@ export const Filter = ({ changeRegion }: FilterProps) => {
   };
 
   return (
-    <div className={`filter ${filterStatus ? "" : ""}`} onClick={handleStatus}>
+    <div className={`filter`} onClick={handleStatus}>
       <small>
         Filter by Region
-        <i
-          className={`fa-solid ${
-            filterStatus ? "fa-angle-down" : "fa-angle-up"
-          }`}
-        ></i>
+        <FontAwesomeIcon icon={filterStatus ? faAngleDown : faAngleUp} />
       </small>
 
       {filterStatus && <Regions changeRegion={changeRegion} />}
