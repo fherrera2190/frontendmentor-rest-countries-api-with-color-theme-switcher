@@ -1,14 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { CountryPage, Home } from "../pages";
+import { CountryDetailPage, HomePage } from "../pages";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomePage />,
   },
   {
     path: "/country/:alpha",
-    element: <CountryPage />,
+    element: <CountryDetailPage />,
   },
 ]);
 

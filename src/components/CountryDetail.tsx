@@ -1,4 +1,5 @@
 import { CountryDetailProps } from "../interfaces/CountryDetail";
+import { ListBorders } from "./ListBorders";
 
 export const CountryDetail = ({ pais }: CountryDetailProps) => {
   return (
@@ -36,6 +37,13 @@ export const CountryDetail = ({ pais }: CountryDetailProps) => {
             <p>
               <strong>Languages:</strong>
             </p>
+          </div>
+        </div>
+
+        <div className="borders">
+          <strong>Border Countries:</strong>
+          <div className="borders-list">
+            <ListBorders borders={pais.borders} />
           </div>
         </div>
       </div>

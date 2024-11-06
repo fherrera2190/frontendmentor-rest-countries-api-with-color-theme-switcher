@@ -1,2 +1,2 @@
-export * from './CountryPage';
-export * from './Home';
+export * from './CountryDetailPage';
+export * from './HomePage';

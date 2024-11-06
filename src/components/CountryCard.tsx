@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Country } from "../interfaces";
-
+import "./CountryCard.css";
 
 export const CountryCard = ({
   alpha2Code,

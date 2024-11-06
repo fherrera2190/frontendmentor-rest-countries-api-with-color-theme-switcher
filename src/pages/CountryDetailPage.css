@@ -1,0 +1,50 @@
+.country-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 100px;
+  margin-bottom: 50px;
+
+  & .flag {
+    width: 50%;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  & .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    & .details {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      & .left {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      & .right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    & .borders {
+      display: flex;
+      gap: 10px;
+      & strong{
+        text-wrap: nowrap;
+      }
+      & .borders-list{
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

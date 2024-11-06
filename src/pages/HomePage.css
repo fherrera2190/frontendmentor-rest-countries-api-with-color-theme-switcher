@@ -1,0 +1,64 @@
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 30px auto;
+    & .filter {
+      padding: 15px 20px;
+      border-radius: 5px;
+      background-color: #333;
+  
+      cursor: pointer;
+      position: relative;
+      & small {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+      & .regions {
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+  
+        width: 100%;
+        left: 0;
+        padding: 15px 20px;
+        bottom: -160px;
+        & button {
+          color: inherit;
+          display: flex;
+          border: none;
+          cursor: pointer;
+          background-color: inherit;
+          gap: 10px;
+          margin-bottom: 10px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  
+    & .search {
+      background-color: #333;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      gap: 20px;
+      padding: 15px 20px;
+      min-width: 300px;
+      & button {
+        background-color: inherit;
+        border: none;
+      }
+      & input {
+        border: none;
+        background-color: inherit;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }

@@ -19,9 +19,7 @@ export const useFetchCountries = (url: string) => {
     setCountries(paises);
   };
   const getByAlpha = async (alpha: string) => {
-    console.log(alpha);
     const paises = (await getData(url + "/alpha/" + alpha)) as Country[];
-    console.log(paises);
     setCountries(paises);
   };
 
