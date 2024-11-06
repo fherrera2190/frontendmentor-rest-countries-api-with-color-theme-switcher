@@ -1,7 +1,6 @@
 .country-card {
+  border: 1px solid rgba(78, 74, 74, 0.25);
   border-radius: 5px;
-  background-color: #333;
-  color: #fff;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -23,7 +22,12 @@
   }
   & .info {
     font-size: small;
-    font-weight: 200;
     padding: 20px;
+    & strong{
+      font-weight: 600;
+    }
+    & small{
+      font-weight: 200;
+    }
   }
 }

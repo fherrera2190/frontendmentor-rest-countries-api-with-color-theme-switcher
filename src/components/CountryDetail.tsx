@@ -5,7 +5,7 @@ export const CountryDetail = ({ pais }: CountryDetailProps) => {
   return (
     <div className="country-page">
       <div className="flag">
-        <img src={pais.flags.svg} alt="" />
+        <img src={pais.flags.svg} loading="lazy" alt={`${pais.name}`} />
       </div>
       <div className="info">
         <h1>{pais.name}</h1>
@@ -32,10 +32,12 @@ export const CountryDetail = ({ pais }: CountryDetailProps) => {
               <strong>Top Level Domain:</strong> {pais.topLevelDomain}
             </p>
             <p>
-              <strong>Currencies:</strong>
+              <strong>Currencies: </strong>
+              {pais.currencies[0].name}
             </p>
             <p>
-              <strong>Languages:</strong>
+              <strong>Languages: </strong>
+              {pais.languages.map((lang) => lang.name).join(", ")}
             </p>
           </div>
         </div>

@@ -19,14 +19,14 @@ export const CountryCard = ({
 
       <div className="info">
         <p>
-          Population: <small>{population}</small>
+          <strong>Population: </strong> <small>{population}</small>
         </p>
         <p>
-          Region: <small>{region}</small>
+          <strong>Region: </strong> <small>{region}</small>
         </p>
 
         <p>
-          Capital: <small>{capital}</small>
+          <strong> Capital: </strong> <small>{capital}</small>
         </p>
       </div>
     </Link>
