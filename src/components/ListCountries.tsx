@@ -9,7 +9,9 @@ export const ListCountries = ({ countries }: ListCountriesProps) => {
           <CountryCard key={country.alpha2Code} {...country} />
         ))
       ) : (
-        <p>No countries</p>
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
       )}
     </div>
   );

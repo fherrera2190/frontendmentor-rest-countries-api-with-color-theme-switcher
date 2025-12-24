@@ -6,7 +6,7 @@ export const useFetchCountries = (url: string) => {
   const [countries, setCountries] = useState<Country[]>([]);
 
   const getAllCountries = async () => {
-    const paises = (await getData(url + "/all")) as Country[];
+    const paises = (await getData(url + "/all?fields=/all?fields=name,flags,alpha2Code,population,region,capital")) as Country[];
     setCountries(paises);
   };
 
